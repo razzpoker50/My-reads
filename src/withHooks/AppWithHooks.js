@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Search from "./Search";
-import Dashboard from "./Dashboard";
-import "./App.css";
+import SearchWithHooks from "./SearchWithHooks";
+import DashboardWithHooks from "./DashboardWithHooks";
+import "../App.css";
 
 class BooksApp extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class BooksApp extends React.Component {
               exact
               render={() => {
                 console.log("Dashboard");
-                return <Dashboard />;
+                return <DashboardWithHooks />;
               }}
             />
             <Route
@@ -24,7 +24,7 @@ class BooksApp extends React.Component {
               exact
               render={() => {
                 console.log("search");
-                return <Search />;
+                return <SearchWithHooks />;
               }}
             />
           </Switch>
